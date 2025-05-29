@@ -16,13 +16,13 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 dataset = []
-with open('News_Category_Dataset_v3.json', 'r') as file:
+with open('data/News_Category_Dataset_v3.json', 'r') as file:
     for line in file:
         line_dict = json.loads(line)
         dataset.append([line_dict['headline'], line_dict['category']])
 
 '''
-file_path = 'netflix_reviews.csv'
+file_path = 'data/netflix_reviews.csv'
 df = pd.read_csv(file_path)
 
 # Ensure the DataFrame has the required columns
